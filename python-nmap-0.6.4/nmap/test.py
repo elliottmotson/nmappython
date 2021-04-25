@@ -3,4 +3,4 @@ import json
 nmap = nmap3.Nmap()
 results = nmap.nmap_version()
 
-print(typeof(json.dumps(results)))
+print(type(json.dumps(results)))
