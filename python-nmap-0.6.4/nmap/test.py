@@ -34,7 +34,7 @@ def loadMenu():
     print("[4] - ")
     print("[5] - Exit")
 
-    inputCase = raw_input()
+    inputCase = input()
 
     if inputCase = "1":
             print("New session created" + datetime.now())
@@ -56,7 +56,7 @@ def loadMenu():
                 exit()
         else
                 print("ERROR: Syntax incorrect")
-                
+
     return 0;
 loadMenu()
 
