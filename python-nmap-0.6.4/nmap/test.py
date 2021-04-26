@@ -36,29 +36,27 @@ def loadMenu():
 
     inputCase = raw_input()
 
-    match inputCase:
-        case "1":
+    if inputCase = "1":
             print("New session created" + datetime.now())
             portscan()
-            #todo - recon
-        case "2":
+        elif inputCase = "2":
             def loadSession():
                 print("Select session to load")
                 loadSession()
                 #todo - Link with mongodb
-        case "3":
+        elif inputCase = "3":
                 print("Save session")
                 saveSession()
                 #todo - Fetch from mongodb
-        case "4":
+        elif inputCase = "4":
                 loadMenu()
                 #spare
-        case "5":
+        elif inputCase = "5":
                 print("Shutting down")
                 exit()
-        case _:
+        else
                 print("ERROR: Syntax incorrect")
-                pass
+                
     return 0;
 loadMenu()
 
