@@ -20,7 +20,7 @@ def portscan():
     print("Enter target IP address:")
     target = input()
 
-    if check(target) = True:
+    if check(target):
         print("Target IP: " + target)
         print("NOMINAL")
 
