@@ -37,24 +37,23 @@ def loadMenu():
     inputCase = raw_input()
 
     match inputCase:
-        case 1:
+        case "1":
             print("New session created" + datetime.now())
             portscan()
             #todo - recon
-        case 2:
+        case "2":
             def loadSession():
                 print("Select session to load")
                 loadSession()
                 #todo - Link with mongodb
-        case 3:
-
+        case "3":
                 print("Save session")
                 saveSession()
                 #todo - Fetch from mongodb
-        case 4:
+        case "4":
                 loadMenu()
                 #spare
-        case 5:
+        case "5":
                 print("Shutting down")
                 exit()
         case _:
