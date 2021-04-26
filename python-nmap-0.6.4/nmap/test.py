@@ -59,7 +59,7 @@ def loadMenu():
                 exit()
         case _:
                 print("ERROR: Syntax incorrect")
-
+                pass
     return 0;
 loadMenu()
 
