@@ -34,9 +34,9 @@ def loadMenu():
     print("[4] - ")
     print("[5] - Exit")
 
-    menuInput = input()
+    inputCase = raw_input()
 
-    match menuInput:
+    match inputCase:
         case 1:
             print("New session created" + datetime.now())
             portscan()
