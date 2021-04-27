@@ -32,7 +32,7 @@ def portScan():
     print("[1] - Fingerprint target")
     print("[2] - Scan subnet")
     print("[3] - Save current session")
-    print("[4] - Placeholder")
+    print("[4] - Back")
     print("[5] - Exit")
 
     inputCase = input()
@@ -57,7 +57,7 @@ def portScan():
         portScan()
         #todo - Fetch from mongodb
     elif inputCase == "4":
-        portScan()
+        main()
         #spare
     elif inputCase == "5":
         print("Shutting down")
