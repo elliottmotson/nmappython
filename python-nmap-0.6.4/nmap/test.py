@@ -42,17 +42,17 @@ def portScan(targetIP):
 
     if inputCase == "1":
         print("Fingerprinting OS of " + targetIP)
-        os_results = json.dumps(nmap.nmap_os_detection(targetIP))
+        os_results = json.loads(nmap.nmap_os_detection(targetIP))
         print(os_results)
 
         for targetIP in os_results:
 
-            print(targetIP.osmatch[0].name)
-
+            print(targetIP[osmatch][0][name])
+            print("OPERATING SYSTEM: " + os_accuracy)
             pass
 
-        os_accuracy = os_results["accuracy"][1]
-        print("Accuracy: " + os_accuracy)
+        #os_accuracy = os_results["accuracy"][1]
+        #print("Accuracy: " + os_accuracy)
 
 
         #os_accuracy = os_results["name"][1]
