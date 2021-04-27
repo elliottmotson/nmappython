@@ -52,7 +52,10 @@ def portScan(targetIP):
 
         portScan(targetIP)
     elif inputCase == "2":
-        subnet_results = nmap.nmap_subnet_scan(target) #Must be root
+        print("Enter subnet")
+        subnet = input()
+        subnet_target = (targetIP + "/" + subnet)
+        subnet_results = nmap.nmap_subnet_scan(subnet_target) #Must be root
         print(subnet_results)
         portScan(targetIP)
     elif inputCase == "3":
@@ -114,7 +117,7 @@ def main():
         saveSession()
         #todo - Fetch from mongodb
     elif inputCase == "4":
-        loadMenu()
+        main()
         #spare
     elif inputCase == "5":
         print("Shutting down")
