@@ -8,15 +8,6 @@ results = nmap.nmap_version()
 
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
-def check(target):
-    target = main.target
-    if(re.search(regex, target)):
-         return True;
-    else:
-        print("ERROR: Invalid IP address")
-        return False;
-check(target)
-
 def portscan():
     print("Enter target IP address:")
     target = input()
@@ -25,6 +16,14 @@ def portscan():
         print("Target IP: " + target)
         print("NOMINAL")
 portscan()
+
+def check(target):
+    if(re.search(regex, target)):
+         return True;
+    else:
+        print("ERROR: Invalid IP address")
+        return False;
+check(target)
 
 def main():
     print("Menu")
