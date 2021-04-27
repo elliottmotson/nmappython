@@ -33,7 +33,7 @@ def main():
     inputCase = input()
 
     if inputCase == "1":
-        print("New session created" + datetime.datetime.now())
+        print("New session created" + datetime.now())
         portscan()
     elif inputCase == "2":
         def loadSession():
