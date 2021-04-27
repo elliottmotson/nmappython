@@ -37,9 +37,7 @@ def portScan():
     print("[5] - Exit")
 
 
-    userInput = input()
-
-    match userInput:
+    match input():
         case "1":
             os_results = nmap.nmap_os_detection(target)
             print("Accuracy: " + (os_results["accuracy"][1]))
