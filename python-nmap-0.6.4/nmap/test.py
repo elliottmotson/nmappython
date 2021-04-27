@@ -17,10 +17,10 @@ def is_root():
 def newRecon():
     print("Enter target IP address:")
     target = input()
-    targetIP = target
     if(re.search(regex, target)):
         print("Target IP: " + target)
         print("NOMINAL")
+        target = targetIP
         portScan()
         return True;
     else:
