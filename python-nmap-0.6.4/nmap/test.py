@@ -7,6 +7,7 @@ import os
 nmap = nmap3.Nmap()
 results = nmap.nmap_version()
 target = "NOT SET"
+targetIP = ""
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
 def is_root():
