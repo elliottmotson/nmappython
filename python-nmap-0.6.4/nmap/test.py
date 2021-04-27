@@ -36,7 +36,30 @@ def portScan():
     print("[4] - Placeholder")
     print("[5] - Exit")
 
+    inputCase = input()
 
+    if inputCase == "1":
+        print("Fingerprinting OS of target")
+            os_results = nmap.nmap_os_detection(target)
+            print("Accuracy: " + (os_results["accuracy"][1]))
+            print("Name: " + (os_results["name"][1]))
+            portScan()
+    elif inputCase == "2":
+        portScan()
+    elif inputCase == "3":
+
+        portScan()
+        #todo - Fetch from mongodb
+    elif inputCase == "4":
+        portScan()
+        #spare
+    elif inputCase == "5":
+        print("Shutting down")
+        exit()
+    else:
+        print("ERROR: Syntax incorrect")
+
+'''
     match input():
         case "1":
             os_results = nmap.nmap_os_detection(target)
@@ -50,6 +73,8 @@ def portScan():
 
         case _:
             pass
+
+'''
 
 def main():
     if is_root() == 0:
