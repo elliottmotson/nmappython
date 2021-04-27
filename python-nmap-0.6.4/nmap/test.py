@@ -18,9 +18,10 @@ def newRecon():
     print("Enter target IP address:")
     target = input()
     if(re.search(regex, target)):
-        print("Target IP: " + target)
+        targetIP = target
+        print("Target IP: " + targetIP)
         print("NOMINAL")
-        target = targetIP
+
         portScan()
         return True;
     else:
