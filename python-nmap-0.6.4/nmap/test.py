@@ -20,8 +20,6 @@ def portscan():
         print("ERROR: Invalid IP address")
         return False;
 
-portscan()
-
 def main():
     print("Menu")
     print("[1] - Start new recon session")
@@ -33,7 +31,7 @@ def main():
     inputCase = input()
 
     if inputCase == "1":
-        print("New session created" + datetime.now())
+        print("New session created")
         portscan()
     elif inputCase == "2":
         def loadSession():
