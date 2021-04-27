@@ -47,7 +47,7 @@ def portScan(targetIP):
 
         for targetIP in os_results:
 
-            print(targetIP["osmatch"][0]["name"])
+            print(targetIP.osmatch[0].name)
 
             pass
 
