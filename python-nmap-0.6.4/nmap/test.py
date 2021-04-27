@@ -40,8 +40,8 @@ def main():
         portscan()
     elif inputCase == 2:
         def loadSession():
-        print("Select session to load")
-        loadSession()
+            print("Select session to load")
+            loadSession()
         #todo - Link with mongodb
     elif inputCase == 3:
         print("Save session")
