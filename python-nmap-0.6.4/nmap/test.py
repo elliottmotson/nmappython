@@ -1,7 +1,7 @@
 import nmap3
 import json
 import re
-from datetime import datetime
+import datetime
 
 nmap = nmap3.Nmap()
 results = nmap.nmap_version()
@@ -33,7 +33,7 @@ def main():
     inputCase = input()
 
     if inputCase == "1":
-        print("New session created" + datetime.now())
+        print("New session created" + datetime.datetime.now())
         portscan()
     elif inputCase == "2":
         def loadSession():
