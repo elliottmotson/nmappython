@@ -12,17 +12,19 @@ def portscan():
     print("Enter target IP address:")
     target = input()
     istrue = check(target)
-    if istrue:
+
+    if(re.search(regex, target)):
         print("Target IP: " + target)
         print("NOMINAL")
-portscan()
-
-def check(target):
-    if(re.search(regex, target)):
-         return True;
+        return True;
     else:
         print("ERROR: Invalid IP address")
         return False;
+
+portscan()
+
+def check(target):
+
 check(target)
 
 def main():
