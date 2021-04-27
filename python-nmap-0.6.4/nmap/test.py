@@ -20,7 +20,7 @@ def newRecon():
     if(re.search(regex, target)):
         targetIP = target
         print("Target IP: " + targetIP)
-        print("NOMINAL")
+        print("-NOMINAL-")
 
         portScan(targetIP)
         return True;
