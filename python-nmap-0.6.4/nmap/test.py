@@ -23,10 +23,6 @@ def portscan():
 
 portscan()
 
-def check(target):
-
-check(target)
-
 def main():
     print("Menu")
     print("[1] - Start new recon session")
