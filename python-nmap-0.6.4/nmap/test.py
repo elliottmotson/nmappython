@@ -46,7 +46,7 @@ def portScan(targetIP):
         print(os_results)
 
         for targetIP in os_results:
-
+            
             print(targetIP["osmatch"][0]["name"])
             print("OPERATING SYSTEM: " + os_accuracy)
             pass
