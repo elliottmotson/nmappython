@@ -2,13 +2,18 @@ import nmap3
 import json
 import re
 import datetime
+import os
 
 nmap = nmap3.Nmap()
 results = nmap.nmap_version()
 
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
-def portscan():
+def is_root():
+    return os.geteuid() == 0
+
+
+def newRecon():
     print("Enter target IP address:")
     target = input()
 
@@ -21,6 +26,9 @@ def portscan():
         return False;
 
 def main():
+    if is_root() == 0:
+        print("USER NOT ROOT, THINGS MAY BREAK UNEXPECTEDLY")
+
     print("Menu")
     print("[1] - Start new recon session")
     print("[2] - Load existing recon session")
@@ -32,7 +40,7 @@ def main():
 
     if inputCase == "1":
         print("New session created")
-        portscan()
+        newRecon()
     elif inputCase == "2":
         def loadSession():
             print("Select session to load")
