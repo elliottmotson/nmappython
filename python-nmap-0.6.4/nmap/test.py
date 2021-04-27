@@ -6,7 +6,7 @@ import os
 
 nmap = nmap3.Nmap()
 results = nmap.nmap_version()
-
+target = ""
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
 def is_root():
@@ -16,9 +16,8 @@ def is_root():
 def newRecon():
     print("Enter target IP address:")
     target = input()
-
     if(re.search(regex, target)):
-        print("Target IP: " + target)
+        print("Target IP: " .join(target))
         print("NOMINAL")
         portScan()
         return True;
