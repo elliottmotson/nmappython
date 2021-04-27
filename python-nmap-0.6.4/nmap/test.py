@@ -1,9 +1,9 @@
-import nmap
+import nmap3
 import json
 import re
 from datetime import datetime
 
-nmap = nmap3.Nmap()
+nmap3 = nmap3.Nmap()
 results = nmap.nmap_version()
 
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
