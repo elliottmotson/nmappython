@@ -41,8 +41,8 @@ def portScan(targetIP):
     inputCase = input()
 
     if inputCase == "1":
-        print("Fingerprinting OS of target")
-        os_results = nmap.nmap_os_detection(target)
+        print("Fingerprinting OS of " + targetIP)
+        os_results = nmap.nmap_os_detection(targetIP)
         print(os_results)
         #os_accuracy = os_results["accuracy"][1]
         #print("Accuracy: " + os_accuracy)
@@ -88,6 +88,9 @@ def portScan(targetIP):
 def main():
     if is_root() == 0:
         print("USER NOT ROOT, THINGS MAY BREAK UNEXPECTEDLY")
+    else:
+        print("User is root")
+
 
     print("Menu")
     print("[1] - Start new recon session")
