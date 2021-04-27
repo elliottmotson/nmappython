@@ -6,7 +6,7 @@ import os
 
 nmap = nmap3.Nmap()
 results = nmap.nmap_version()
-target = ""
+target = "NOT SET"
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
 def is_root():
@@ -30,7 +30,7 @@ def portScan():
     print("PORTSCAN MENU")
     print("Target: " + target)
     print("[1] - Fingerprint target")
-    print("[2] - Load existing recon session")
+    print("[2] - Scan subnet")
     print("[3] - Save current session")
     print("[4] - Placeholder")
     print("[5] - Exit")
@@ -49,6 +49,8 @@ def portScan():
 
         portScan()
     elif inputCase == "2":
+        subnet_results = nmap.nmap_subnet_scan(target) #Must be root
+        print(subnet_results)
         portScan()
     elif inputCase == "3":
 
