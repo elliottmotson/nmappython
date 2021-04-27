@@ -37,7 +37,7 @@ def portScan():
     print("[5] - Exit")
 
 
-userInput = input()
+    userInput = input()
 
     match userInput:
         case "1":
