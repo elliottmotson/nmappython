@@ -23,15 +23,14 @@ def portscan():
     if check(target):
         print("Target IP: " + target)
         print("NOMINAL")
-
 portscan()
 
-def loadMenu():
+def main():
     print("Menu")
     print("[1] - Start new recon session")
     print("[2] - Load existing recon session")
     print("[3] - Save current session")
-    print("[4] - ")
+    print("[4] - Placeholder")
     print("[5] - Exit")
 
     inputCase = input()
@@ -58,9 +57,9 @@ def loadMenu():
         print("ERROR: Syntax incorrect")
 
     return 0;
-loadMenu()
+main()
 
-loadMenu()
+main()
 
 
 
