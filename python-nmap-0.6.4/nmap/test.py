@@ -20,11 +20,37 @@ def newRecon():
     if(re.search(regex, target)):
         print("Target IP: " + target)
         print("NOMINAL")
+        portScan()
         return True;
     else:
         print("ERROR: Invalid IP address")
         return False;
 
+def portScan():
+
+    print("PORTSCAN MENU")
+    print("Target: " + target)
+    print("[1] - Fingerprint target")
+    print("[2] - Load existing recon session")
+    print("[3] - Save current session")
+    print("[4] - Placeholder")
+    print("[5] - Exit")
+
+
+userInput = input()
+match userInput:
+    case "1":
+        os_results = nmap.nmap_os_detection(target)
+        print("Accuracy: " + (os_results["accuracy"][1]))
+        print("Name: " + (os_results["name"][1]))
+    case "2":
+
+    case "3":
+
+    case "4":
+
+    case _:
+        pass
 def main():
     if is_root() == 0:
         print("USER NOT ROOT, THINGS MAY BREAK UNEXPECTEDLY")
@@ -63,7 +89,3 @@ def main():
 main()
 
 main()
-
-
-
-#print(results["nmap"][1])
