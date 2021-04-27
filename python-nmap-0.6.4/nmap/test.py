@@ -50,14 +50,14 @@ def portScan(targetIP):
         #os_accuracy = os_results["name"][1]
         #print("Accuracy: " + os_accuracy)
 
-        portScan()
+        portScan(targetIP)
     elif inputCase == "2":
         subnet_results = nmap.nmap_subnet_scan(target) #Must be root
         print(subnet_results)
-        portScan()
+        portScan(targetIP)
     elif inputCase == "3":
 
-        portScan()
+        portScan(targetIP)
         #todo - Fetch from mongodb
     elif inputCase == "4":
         main()
