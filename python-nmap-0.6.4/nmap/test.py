@@ -40,10 +40,10 @@ def portScan():
 
     if inputCase == "1":
         print("Fingerprinting OS of target")
-            os_results = nmap.nmap_os_detection(target)
-            print("Accuracy: " + (os_results["accuracy"][1]))
-            print("Name: " + (os_results["name"][1]))
-            portScan()
+    os_results = nmap.nmap_os_detection(target)
+        print("Accuracy: " + (os_results["accuracy"][1]))
+        print("Name: " + (os_results["name"][1]))
+        portScan()
     elif inputCase == "2":
         portScan()
     elif inputCase == "3":
