@@ -45,11 +45,11 @@ def portScan(targetIP):
         os_results = nmap.nmap_os_detection(targetIP)
         print(os_results)
 
-        for targetIP in os_results:
-            osName = targetIP["osmatch"][0]["name"]
-            print(osName)
-            print("OPERATING SYSTEM: " + os_accuracy)
-            pass
+        #for targetIP in os_results:
+        osName = targetIP["osmatch"][0]["name"]
+        print(osName)
+        print("OPERATING SYSTEM: " + os_accuracy)
+        #    pass
 
         #os_accuracy = os_results["accuracy"][1]
         #print("Accuracy: " + os_accuracy)
