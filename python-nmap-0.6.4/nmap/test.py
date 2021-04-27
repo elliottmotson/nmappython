@@ -36,7 +36,7 @@ def loadMenu():
 
     inputCase = input()
 
-    if inputCase == 1:
+        if inputCase == 1:
             print("New session created" + datetime.now())
             portscan()
         elif inputCase == 2:
