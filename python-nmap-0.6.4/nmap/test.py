@@ -53,7 +53,7 @@ def main():
     elif inputCase == 5:
         print("Shutting down")
         exit()
-    else
+    else:
         print("ERROR: Syntax incorrect")
 
     return 0;
