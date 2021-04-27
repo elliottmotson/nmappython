@@ -22,13 +22,13 @@ def newRecon():
         print("Target IP: " + targetIP)
         print("NOMINAL")
 
-        portScan()
+        portScan(targetIP)
         return True;
     else:
         print("ERROR: Invalid IP address")
         return False;
 
-def portScan():
+def portScan(targetIP):
 
     print("PORTSCAN MENU")
     print("Target: " + targetIP)
