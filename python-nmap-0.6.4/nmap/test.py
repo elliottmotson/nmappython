@@ -16,6 +16,7 @@ def is_root():
 def newRecon():
     print("Enter target IP address:")
     target = input()
+    targetIP = target
     if(re.search(regex, target)):
         print("Target IP: " + target)
         print("NOMINAL")
@@ -28,7 +29,7 @@ def newRecon():
 def portScan():
 
     print("PORTSCAN MENU")
-    print("Target: " + target)
+    print("Target: " + targetIP)
     print("[1] - Fingerprint target")
     print("[2] - Scan subnet")
     print("[3] - Save current session")
