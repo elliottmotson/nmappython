@@ -9,6 +9,7 @@ results = nmap.nmap_version()
 regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
 
 def check(target):
+    target = main.target
     if(re.search(regex, target)):
          return True;
     else:
