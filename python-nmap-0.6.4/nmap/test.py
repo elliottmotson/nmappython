@@ -36,26 +36,26 @@ def loadMenu():
 
     inputCase = input()
 
-        if inputCase == 1:
+    if inputCase == 1:
             print("New session created" + datetime.now())
             portscan()
-        elif inputCase == 2:
+    elif inputCase == 2:
             def loadSession():
-                print("Select session to load")
-                loadSession()
-                #todo - Link with mongodb
-        elif inputCase == 3:
-                print("Save session")
-                saveSession()
-                #todo - Fetch from mongodb
-        elif inputCase == 4:
-                loadMenu()
-                #spare
-        elif inputCase == 5:
-                print("Shutting down")
-                exit()
-        else
-                print("ERROR: Syntax incorrect")
+            print("Select session to load")
+            loadSession()
+            #todo - Link with mongodb
+    elif inputCase == 3:
+            print("Save session")
+            saveSession()
+            #todo - Fetch from mongodb
+    elif inputCase == 4:
+            loadMenu()
+            #spare
+    elif inputCase == 5:
+            print("Shutting down")
+            exit()
+    else
+            print("ERROR: Syntax incorrect")
 
     return 0;
 loadMenu()
