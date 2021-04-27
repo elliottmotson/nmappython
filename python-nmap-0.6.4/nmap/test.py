@@ -14,7 +14,7 @@ def check(target):
     else:
         print("ERROR: Invalid IP address")
         return False;
-check(target)
+check()
 
 def portscan():
     print("Enter target IP address:")
