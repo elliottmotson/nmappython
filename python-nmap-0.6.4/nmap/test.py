@@ -61,7 +61,7 @@ def portScan(targetIP):
         #todo - Fetch from mongodb
     elif inputCase == "4":
         main()
-        #spare
+        #back to main menu
     elif inputCase == "5":
         print("Shutting down")
         exit()
