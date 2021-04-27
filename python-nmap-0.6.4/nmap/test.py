@@ -1,4 +1,4 @@
-import nmap3
+import nmap
 import json
 import re
 from datetime import datetime
