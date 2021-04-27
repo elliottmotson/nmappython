@@ -38,19 +38,21 @@ def portScan():
 
 
 userInput = input()
-match userInput:
-    case "1":
-        os_results = nmap.nmap_os_detection(target)
-        print("Accuracy: " + (os_results["accuracy"][1]))
-        print("Name: " + (os_results["name"][1]))
-    case "2":
 
-    case "3":
+    match userInput:
+        case "1":
+            os_results = nmap.nmap_os_detection(target)
+            print("Accuracy: " + (os_results["accuracy"][1]))
+            print("Name: " + (os_results["name"][1]))
+        case "2":
 
-    case "4":
+        case "3":
 
-    case _:
-        pass
+        case "4":
+
+        case _:
+            pass
+
 def main():
     if is_root() == 0:
         print("USER NOT ROOT, THINGS MAY BREAK UNEXPECTEDLY")
