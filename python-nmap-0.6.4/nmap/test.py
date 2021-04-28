@@ -43,9 +43,10 @@ def portScan(targetIP):
     if inputCase == "1":
         print("Fingerprinting OS of " + targetIP)
         os_results = nmap.nmap_os_detection(targetIP)
-        print(os_results)
+        #print(os_results)
 
         for targetIP in os_results:
+            print(targetIP)
             osName = targetIP["osmatch"]
             osName = osName[0]
             osName = osName[".name"]
