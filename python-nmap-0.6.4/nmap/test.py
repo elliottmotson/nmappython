@@ -1,4 +1,4 @@
-import nmap3
+   import nmap3
 import json
 import re
 import datetime
@@ -46,7 +46,8 @@ def portScan(targetIP):
         #print(os_results)
 
         for target in os_results:
-            print(os_results["osmatch"][0]["name"])
+            #print(os_results["osmatch"][0]["name"])
+            print(os_results)
             print(osName)
             print("OPERATING SYSTEM: " + os_accuracy)
             pass
@@ -78,6 +79,7 @@ def portScan(targetIP):
         exit()
     else:
         print("ERROR: Syntax incorrect")
+        portScan(targetIP)
 
 '''
     match input():
